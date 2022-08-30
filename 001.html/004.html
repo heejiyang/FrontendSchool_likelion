@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emmet 요약</title>
+</head>
+<body>
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+  </head>
+  <body>
+    h1{hello world}+tab
+    <h1>hello world</h1>
+    p{hello}*10
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    h1+h2+p
+    <h1>one</h1>
+    <h2>two</h2>
+    <p>three</p>
+    h1#one
+    <h1 id="one"></h1>
+    h1.class
+    <h1 class="ond"></h1>
+    #one
+    <div id="one"></div>
+
+    h1#one.two.three.four
+    <h1 id="one" class="two three four"></h1>
+
+    h$*6
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+
+    <!-- $는 증가 -->
+    h${hello}*6
+    <h1>hello</h1>
+    <h2>hello</h2>
+    <h3>hello</h3>
+    <h4>hello</h4>
+    <h5>hello</h5>
+    <h6>hello</h6>
+
+    div.container-$.row-$*6
+    <div class="container-1 row-1"></div>
+    <div class="container-2 row-2"></div>
+    <div class="container-3 row-3"></div>
+    <div class="container-4 row-4"></div>
+    <div class="container-5 row-5"></div>
+    <div class="container-6 row-6"></div>
+
+    <!--
+    lorem 의미없는 text
+    lorem5: 5개의 단어
+    lorem*5: 5개의 문단-->
+    lorem5
+    Lorem ipsum dolor sit amet.
+
+    <!-- img:z 사이즈까지 나온다. -->
+    <img src="" alt="" sizes="" srcset="">
+
+    p[a="value1" b="value2" c=1 d=value3]
+    <p a="value1" b="value2" c="1" d="value3"></p>
+    
+    table>(tr>td{hello}*10)*5
+    <table>
+      <tr>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+      </tr>
+      <tr>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+      </tr>
+      <tr>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+      </tr>
+      <tr>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+      </tr>
+      <tr>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+        <td>hello</td>
+      </tr>
+
+    table>(thead>tr>th{제목}*5)+(tbody>tr*10>td{내용}*5)+tfoot>tr>td*5
+    
+    </table>
+
+  </body>
+  </html>
+</body>
+</html>
