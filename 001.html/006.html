@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grouping content</title>
+</head>
+<body>
+<!-- 3가지 이상 항목의 목록 정의 -->
+<!-- ordered list:숫자가 있는 목록(ex.레시피) -->
+  <ol>
+    <li>계란 휘핑</li>
+    <li>후라이펜에 붓기</li>
+    <li>1분 가열</li>
+  </ol>
+<!-- unordered list:순서가 없는 목록 -->
+  <ul>
+    <li>HTML CSS:웹사이트 개발과 디자인 기초</li>
+    <li>모던자바스크립트 딥다이브</li>
+  </ul>
+  <ol>
+    <li>
+      <ul>
+        <!-- 직계 자식 요소로는 li만 사용가능하므로 li자식으로 넣는다. -->
+      </ul>
+    </li>
+  </ol>
+  <!-- 목록 정의 / 사전처럼 정의할때(정의형 목록) -->
+  <!-- dl:정의 목록 / dt:정의할 용어 / dd:용어의 설명 / div:dt와 dd를 묶어주는데 쓸 수 있다.(스타일 고려) -->
+  <dl>
+    <div>
+      <dt>HTML</dt>
+      <dd>마크업 언어입니다.</dd>
+    </div>
+  </dl>
+  <!-- 이미지 -->
+  <!-- figure : 이미지와 캡션 연결 -->
+  <figure>
+    <img src="image/samsung.png" alt="삼성전자 홈페이지">
+    <!-- figcaption : 이미지에 캡션을 추가하기 위해 도입. -->
+    <figcaption>
+      삼성전자 홈페이지 첫 화면
+    </figcaption>
+  </figure>
+  <!-- p:단락을 표시하는 태그. 하나의 완결된 문단 의미. -->
+  <p>hello world</p>
+  <!-- pre:HTML에 작성한 내용 그대로 화면에 표현. code태그를 사용한다. -->
+  <pre>
+    <code>
+      hello
+      world
+    </code>
+  </pre>
+<!-- 인용 블록 -->
+<!-- blockquote:인용 블록. 여러 줄로 표현 / q:인용구. 한줄로 표현 / cite:누가 한 말인지 -->
+  <blockquote>
+    <p>제발 그만해.. 이러다가 다~~ 죽어!</p>
+    <cite>영화 오징어게임중에서. 오일남</cite>
+  </blockquote>
+<!-- hr:가로줄 표현하기 위해 사용. 이야기에서 장면 전환 또는 문단 안에서 주제가 변경되었을 때 . p 태그 안에서 사용X -->
+  <p>
+    근대란 그렇듯 각자의 능력이 타고난 신분의 제약에서 벗어나 인생역전의 기회를 갖게 해주는 시대를 가리킨다. 그렇다면 쥘리앵의 인생역전은 어디까지 가능했던가.
+    </p>
+    <hr>
+    <p>
+    <!-- Entity:예약어로 사용되고 있는 문자 대체하기 위한 용도. & ~ ;로 끝나는 문자열. -->
+    포괄적으로 ‘근대’라고 적었지만 &#60;적과 흑&#62;의 시대적 배경은 프랑스의 왕정복고기다. 1789년 대혁명 이후 구체제가 붕괴되었지만 1815년 워털루 전투에서 패배한 나폴레옹이 완전히 몰락한 이후에 프랑스...
+    </p>
+</body>
+</html>
