@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        /* 128px이라는 사이즈가 나온다 */
+        div {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- hello 1 16px(기본 body) -->
+    hello 1
+    <div>
+        <!-- 32px (부모 사이즈의 2배) -->
+        hello 2
+        <div>
+            <!-- 64px -->
+            <div>
+                <!-- 128px -->
+                hello world
+            </div>
+        </div>
+    </div>
+</body>
+</html>
