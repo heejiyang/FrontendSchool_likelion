@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+        <style>
+        /* 한 줄 말줄임 코드. */
+            p {
+                /* p 태그의 크기를 제한합니다. */
+                width:300px;
+                /* 요소를 넘어가는 컨텐츠를 숨깁니다. */
+                overflow:hidden;
+                /* 텍스트의 공백을 만났을때 줄바꿈을 해줄지 말지 설정하는 속성.
+                nowrap은 공백을 만나도 줄바꿈하지 않는다.*/
+                white-space:nowrap;
+                /* 요소의 크기를 넘친 텍스트를 말줄임 처리. */
+                text-overflow:ellipsis;
+            }
+        /* 여러줄 말줄임 코드. */
+            /* -webkit-box, -webkit-box-orient 속성은 웹표준 속성이 아나다.
+            브라우저마다 다르게 표현될 수 있다.
+            앞으로 삭제되거나 기능이 변경될 수 있다. */
+            p {
+            overflow: hidden;
+            /* 자식요소들의 배치를 지정하는 속성. flex의 예전 버전. */
+            display:-webkit-box;
+            /*  블록 컨텐츠의 라인 수를 제한하는 속성.*/
+            -webkit-line-clamp: 2;
+            /* 자식요소들의 배치를 수직으로 만드는 속성. flex-direction의 예전 버전입니다. */
+            -webkit-box-orient: vertical;
+            }
+        </style>
+    </head>
+    <body>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem suscipit blanditiis deleniti temporibus mollitia consectetur assumenda magnam voluptatibus placeat, et, consequatur ipsa possimus libero voluptas velit quaerat? Ex, quidem rem.
+    </body>
+</html>
