@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            .container {
+                display: flex;
+                width: 100%;
+            }
+            .item {
+                width: 50px;
+                background-color: aqua;
+                border: 1px solid #000;
+            }
+            /*
+            여백이 다 사라지면 같아진다.
+            컨텐츠를 제외한 남은 여백의 비율.
+            컨텐츠가 꽉 차있으면 비율이 같아진다.
+            넓이가 아니라 여백이 늘어나거나 줄어들때 2배로 늘어나거나 줄어든다. */
+            .item:nth-child(1){
+                flex-grow: 2;
+            }
+            .item:nth-child(2){
+                flex-grow: 1;
+            }
+            .item:nth-child(3){
+                flex-grow: 3;
+            }
+            .item:nth-child(4){
+                flex-grow: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem reprehenderit facilis consequuntur reiciendis sit error temporibus quidem ipsa dolorem, alias corrupti repudiandae dolor, cumque numquam officia fuga asperiores culpa veniam?</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem reprehenderit facilis consequuntur reiciendis sit error temporibus quidem ipsa dolorem, alias corrupti repudiandae dolor, cumque numquam officia fuga asperiores culpa veniam?</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem reprehenderit facilis consequuntur reiciendis sit error temporibus quidem ipsa dolorem, alias corrupti repudiandae dolor, cumque numquam officia fuga asperiores culpa veniam?</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem reprehenderit facilis consequuntur reiciendis sit error temporibus quidem ipsa dolorem, alias corrupti repudiandae dolor, cumque numquam officia fuga asperiores culpa veniam?</div>
+            <div class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem reprehenderit facilis consequuntur reiciendis sit error temporibus quidem ipsa dolorem, alias corrupti repudiandae dolor, cumque numquam officia fuga asperiores culpa veniam?</div>
+        </div>
+    </body>
+</html>
