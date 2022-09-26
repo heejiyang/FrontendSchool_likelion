@@ -1,0 +1,55 @@
+@charset 'utf-8';
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  perspective: 1600px;
+}
+.list-item {
+  position: fixed;
+  width: 340px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  /* margin: -200px 0 0 -170px; 넓이 높이 값을 알아야한다. 유동적일경우 transform */
+  transform: translate(-50%, -50%) rotateY(100deg);
+  /* app의 perspective는 직계자식에게만 적용. preserve보존으로 자식에게도 3d속성을 준다. */
+  transform-style: preserve-3d;
+}
+.list-item li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* rotate할때 뒤에있는 요소 숨기기 위해 */
+  backface-visibility: hidden;
+}
+.list-item li img {
+  /* ul 크기만큼 이미지 크기 맞춘다.
+  단점은 찌그러진다. 원본 비율 맞추기 위해 object-fit:contain; */
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.list-item li:nth-child(1) {
+  transform: rotateY(0) translateZ(calc(340px*7/2/3.14));
+}
+.list-item li:nth-child(2) {
+  transform: rotateY(calc(360deg/7)) translateZ(calc(340px*7/2/3.14));
+}
+.list-item li:nth-child(3) {
+  transform: rotateY(calc(360deg/7*2)) translateZ(calc(340px*7/2/3.14));
+}
+.list-item li:nth-child(4) {
+  transform: rotateY(calc(360deg/7*3)) translateZ(calc(340px*7/2/3.14));
+}
+.list-item li:nth-child(5) {
+  transform: rotateY(calc(360deg/7*4)) translateZ(calc(340px*7/2/3.14));
+}
+.list-item li:nth-child(6) {
+  transform: rotateY(calc(360deg/7*5)) translateZ(calc(340px*7/2/3.14));
+}
+.list-item li:nth-child(7) {
+  transform: rotateY(calc(360deg/7*6)) translateZ(calc(340px*7/2/3.14));
+}
