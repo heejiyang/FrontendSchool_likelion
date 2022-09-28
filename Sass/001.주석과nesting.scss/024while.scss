@@ -1,0 +1,9 @@
+$heeji: 10;
+@while $heeji > 1 {
+  $hojun: $heeji - 2
+  .content-#{$heeji} {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+}

@@ -1,0 +1,30 @@
+.info {
+  font-size: 15px;
+  line-height: 1.34;
+  text-align: right;
+}
+.info span {
+  line-height: 1.34;
+}
+
+/*.one {
+  line-height : $line-normal;
+}*/
+/* .one {
+  $size: 12px;
+  font-size: $size;
+  .three {
+    font-size: $size;//12px
+  }
+}
+.two {
+  $size: 14px;
+  font-size: $size;
+} */
+.one {
+  font-size: 12px;
+}
+
+.two {
+  font-size: 12px;
+}/*# sourceMappingURL=008변수의scope.css.map */

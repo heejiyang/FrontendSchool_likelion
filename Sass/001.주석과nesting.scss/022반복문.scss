@@ -1,0 +1,17 @@
+// #{$변수명}
+@for $i from 1 through 3 {
+  .photo-box:nth-child(#{$i}) {
+    background-image: url("../assets/phoster#{$i}.png");
+  }
+}
+@for $heeji from 1 through 3 {
+  .photo-box:nth-child(#{$heeji}) {
+    background-image: url("../assets/phoster#{$heeji}.png");
+  }
+}
+@for $heeji from 1 through 3 {
+  .profile-#{$heeji} {
+    background-color: red;
+    font-size: #{$heeji * 10}px;
+  }
+}
