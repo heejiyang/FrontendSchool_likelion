@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- https://tailwindcss.com/docs/transition-property -->
+    <div class="flex h-64 justify-center items-center">
+      <!-- delay-150  0.15초 뒤에 실행된다. -->
+      <button
+        class="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded p-5 m-3 text-white">
+        Save Changes
+      </button>
+      <!-- duration-300 애니메이션 지속시간 -->
+      <button
+        class="transition ease-linear bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded p-5 m-3 text-white">
+        Save Changes
+      </button>
+      <button
+        class="transition ease-in-out bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-100 rounded p-5 m-3 text-white">
+        Save Changes
+      </button>
+    </div>
+  </body>
+</html>
