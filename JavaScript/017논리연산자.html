@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+</head>
+<body>
+  <script>
+    let couponlist = ["9b5fcc71", "9b5fcc72", "9b5fcc73"];
+      user = [
+        {
+          userid: 1,
+          username: "hojun",
+          쿠폰사용가능여부: !!couponlist[0],
+          coupon: couponlist[0],
+        },
+      ];
+
+    // true : 1
+    // false : 0
+    // and(&&) : 곱
+    // or(||) : 합
+    // not(!) : 부정
+
+    //(!'') '' =(!false) ''와 같다
+
+    console.log(""); // typeof > string
+    console.log(!!""); //false / typeof > boolean으로 변경
+
+    console.log(Boolean('')); //false
+    console.log(true || false); //true
+    console.log(true || true); //true
+    console.log(true && false); //false
+    console.log(!false); //true
+    console.log(!!false); //false / Boolean 실무에서도 정말 많이 사용한다
+    console.log(!!""); //false
+    console.log(!![]); //true / JS에서만!
+
+    console.log('----------------------');
+    console.log('confuse_1'); //confuse_1
+    console.log('false' == false); //false
+    console.log(!'false'); //false / 문자열이 true값
+    console.log(!'0'); //false
+
+    console.log(Boolean([])); //true / 다른 언어에서는 false
+    console.log(!NaN); //true
+    console.log(!null); //true
+    console.log(!undefined); //true
+    console.log(!!NaN); //false
+    console.log(!!null); //false
+    console.log(!!undefined); //false
+
+    //단락평가(간단한 코드에서 권고한다.)
+    username = '';
+    username = username || '이름을 입력하지 않으신 분';
+    console.log(username); //이름을 입력하지 않으신 분
+
+    username = 'abc';
+    username = username || '이름을 입력하지 않으신 분';
+    console.log(username); //abc
+
+    username = '';
+    pw = '';
+    username = username || '이름을 입력하지 않으신 분';
+    console.log(username); //이름을 입력하지 않으신 분
+
+    //문제 username도 입력하고 pw도 입력해야만 회원가입 성공여부가 true, false 나오게 해주세요. 둘 중에 1개라도 입력이 안되면 false가 나와야 합니다.
+    회원가입성공여부 = username && pw ? true : false;
+    회원가입성공여부 = !!(username && pw);
+    회원가입성공여부 = !(!username || !pw);
+    회원가입성공여부 = !!pw && !!username;
+
+    username = "";
+    pw = "";
+    // 회원가입 성공 여부 = username && pw;
+    // console.log(!!회원가입 성고 여부);
+
+    //참고로 알아두기
+    username = '';
+    username = username || false;
+    console.log(username); //false
+
+    username = '';
+    username = username || 0;
+    console.log(username); //0
+
+    // 드로르간 법칙
+    console.log("드모르간 법칙");
+    //or : ||
+    //and : &&
+    const x = 0;
+    const y = 1;
+    console.log(!(x || y) === (!x && !y)); //true
+    console.log(!(x && y) === (!x || !y)); //true
+
+    //알고리즘 문제
+    let s = 0;
+    for (let i = 0; i < 100; i++) {
+      // console.log(i);
+      if (i % 3 == 0 && i % 5 == 0) {
+        console.log(i); //0, 15, 30, 45, 60, 75, 90
+        s += i;
+      }
+    }
+    console.log(s); //315
+  </script>
+</body>
+</html>

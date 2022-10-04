@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <script>
+    console.log(typeof 'hello world');
+    console.log(typeof 100);
+    console.log(typeof NaN);
+    console.log(typeof true);
+    console.log(typeof undefined);
+    console.log(typeof Symbol());
+    console.log(typeof null);
+    console.log(typeof []);
+    console.log(typeof {});
+    console.log(typeof function () {});
+    console.log(typeof /정규표현식/gi);
+
+    typeof 'hello world'   // string // v
+    typeof 100             // number // v
+    typeof NaN             // number
+    typeof true            // boolean // v
+    typeof undefined       // undefined // v
+    typeof Symbol()        // symbol
+    typeof null            // object, 여기서부터 js가 어려워 집니다.
+    typeof []              // object, 여기서부터 js가 어려워 집니다. 왜 Array가 아닐까요?
+    typeof {}              // object
+    typeof function () {}  // function
+    typeof /정규표현식/gi   // object
+
+    console.log('---------');
+    console.log(10 + 10);
+    console.log("10" + 10);
+    console.log("10" + "10");
+    console.log(10 + "10");
+
+    // 형변환은 형태를 변경하는, 타입을 변경하는 것을 의미
+    console.log('---------');
+    console.log(Number("10") + Number("10")); //권장하지 않는다.
+    console.log(parseInt("10") + parseInt("10")); //권장한다.
+    console.log(String(10) + String(10));
+
+    // Object.prototype.toString.call(데이터).slice(8, -1);
+    // 로 확실하게 알 수 있습니다.
+  </script>
+</body>
+</html>

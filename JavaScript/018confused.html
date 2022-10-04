@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <script>
+    console.log("- 0 -");
+    // true와 숫자의 비교
+    console.log(true == 1); //true
+    console.log(false == 0); //true
+    console.log(true === 1); //false
+    console.log(false === 0); //false
+
+    console.log("- 1 -");
+    console.log(NaN == NaN); //false NaN만 자기 자신이 자기 자신이 아닌 특이 케이스
+    console.log(NaN === NaN); //false
+
+    console.log("- 2 -");
+    // true 일 것 같은 혼란스러운 녀석들
+    console.log(false == null);
+    console.log(false === undefined);
+
+    console.log("- 3 -");
+    // +연산자를 이용한 형변환
+    // 암묵적 형변환은 의도를 파악하기 어려워서 사용 자제
+    console.log(+false); //0 숫자로 변환이 된 것
+    console.log(+true); //1
+    console.log(-false); //-0
+    console.log(-true); //-1
+    console.log(false * 1); //0
+    console.log(true * 1); //1
+    console.log(1 + ""); //string 1
+    console.log(NaN + ""); // NaN
+    console.log(Infinity + ""); // Infinity
+    console.log(true + "" ); //true
+    console.log(false + ""); //false
+    console.log("" + 1); //string 1
+    console.log("12" + 1); //string 121
+    console.log(+"100" + 10); //number
+
+    console.log(0 == -0); //true
+    console.log(+"10" + +"10"); //20
+    //일부러 유지보수 어렵게 만들 이유 아니라면 이렇게 짜면 안된다
+    console.log("2" + "2" - "2"); //22-2 = 20
+    console.log("2" + "2"); //22
+    console.log("2" - "2"); //0 에러 아니다. 수학적 연산을 하려는구나! 판단하고 Number로 던져준다.
+    console.log("a" - "a"); //NaN
+  </script>
+</body>
+</html>
