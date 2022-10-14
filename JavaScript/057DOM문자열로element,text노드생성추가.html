@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <p></p>
+    <input type="text">
+    <button>Write Something!</button>
+
+    <script>
+        const myBtn = document.querySelector("button");
+        const myP = document.querySelector("p");
+        const myInput = document.querySelector("input");
+
+        myBtn.addEventListener('click', function(){
+            console.log(event);
+            // textContent 속성은 노드의 텍스트 콘텐츠를 표현.
+            myP.textContent = myInput.value;
+            myP.innerText = myInput.value;
+        });
+
+        myBtn.addEventListener('input', function(){
+            console.log(event);
+            myP.textContent = myInput.value;
+            myP.innerText = myInput.value;
+        });
+
+        // input 요소에 'input' 이벤트를 연결하면 실시간으로 값이 반영되게 만들 수도 있습니다.
+        myInput.addEventListener('input', function (){
+            console.log(event);
+            myP.textContent = myInput.value;
+            myP.innerText = myInput.value;
+        });
+
+        // innerText 속성은 요소의 렌더링된 텍스트 콘텐츠를 나타냅니다.
+        // (렌더링된에 주목. innerText는 "사람이 읽을 수 있는" 요소만 처리합니다.)
+        myP.innerText = "<strong>I'm Strong!!</strong>";
+
+        // innerHTML: 요소(element) 내에 포함된 HTML 마크업을 가져오거나 설정합니다.
+        myP.innerHTML = "<strong>I'm Strong!!</strong>";
+
+        // 위의 코드를 이렇게 쓸 수 있다.
+        const elStrong = document.createElement("strong");
+        const mytxt = document.createTextNode("I'm strong!!");
+        elStrong.appendChild(mytxt);
+        myP.appendChild(elStrong);
+
+        myP.outerHTML = "<div></div>";
+    </script>
+</body>
+</html>

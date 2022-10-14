@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+< lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <style>
+            .blue {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <ㅠ>
+        <!-- 1
+        <div id="myDiv">div입니다.</div>
+        <div id="myDiv">div입니다.</div>
+        <div id="myDiv">div입니다.</div>
+        <div id="myDiv">div입니다.</div>
+        <div id="myDiv">div입니다.</div> -->
+        <!--
+        <div class="myDiv">div입니다.</div>
+        <div class="myDiv">div입니다.</div>
+        <div class="myDiv">div입니다.</div>
+        <div class="myDiv">div입니다.</div>
+        <div class="myDiv">div입니다.</div> -->
+
+        <!-- 연습 1
+        점심 식단
+        <article id="container">
+            <ul>
+                <li>탕수육</li>
+                <li class="item-second">유산슬</li>
+                <li>짜장면</li>
+            </ul>
+        </article>
+        저녁 식단
+        <article>
+            <ul>
+                <li>된장국</li>
+                <li class="item-second">김치찌개</li>
+                <li>해장국</li>
+            </ul>
+        </article> -->
+
+        <!-- 2
+        <button>HELLO!</button>
+        -->
+
+        <!-- 연습 4
+        <button class="blue">Make me BLUE!</button>
+        -->
+
+        <script>
+        /* 1. DOM트리 접근
+            // id로 접근
+            console.log(document.getElementById('myDiv'));
+
+            // 변수 선언(찾아서 저장하고 사용한다!)
+            const myDiv = document.getElementById('myDiv');
+
+            // 해당하는 모든 요소에 접근. (태그로 접근)
+            console.log(document.getElementsByTagName('div'));
+
+            // 클래스로 접근하는 방법
+            console.log(document.getElementsByClassName('myDiv')); */
+
+        // 연습 1. 배운 문법을 바탕으로 HTML요소들 중 첫번째 item-second클래스와 첫번째 li를 콘솔로 출력해보자.
+
+            // console.log(document.getElementsByClassName("item-second")[0]); // 유산슬
+            // console.log(document.getElementsByTagName("li")[0]); // 탕수육
+
+            // 탐색을 document 부터 시작할 필요는 없습니다!! (이렇게 호출하면 SEO검색이 빨라진다. 사용자 만족도 올라감)
+            // const container = document.getElementById("container");
+
+            // css 선택자로 단일 요소에 접근하기(하나만 찾는다. 우리가 찾으려는 것의 첫번째만 찾는다.)
+            // console.log(document.querySelector(".item-second")); // 유산슬 (HTML Collection 실시간으로 반영되어있다)
+
+            // css 선택자로 여러 요소에 접근하기
+            // document.querySelectorAll(".item-second"); // 유산슬, 김치찌개 (NodeList)
+            // console.log(container.querySelectorAll('li')); // 탕수육, 유산슬, 짜장면
+
+        /* 유사배열객체
+        const obj = {
+            0: "value",
+            1: "value",
+            2: "value",
+            3: "value"
+        } */
+
+        /* 2. DOM제어 명령어
+        // 이벤트 삽입 - listener 함수의 인수에는 이벤트에 대한 정보가 담겨있다.
+        const myBtn = document.querySelector("button");
+
+        myBtn.addEventListener('click', function(){
+            console.log("hello world");
+        })
+
+        // 클래스 제어
+        const myBtn = document.querySelector("button");
+
+        myBtn.addEventListener('click', function(){
+            // blue 라는 클래스의 속성 값을 지정 할 수 있습니다.
+            myBtn.classList.add("blue");
+
+            // myBtn.classList.remove(“blue”);     클래스를 제거합니다.
+            // myBtn.classList.toggle(“blue”);     클래스를 토글합니다. 없으면 넣어주고, 있으면 제거합니다.
+            myBtn.classList.contains(“blue”);      해당하는 클래스가 있는지 확인합니다. boolean값을 반환한다. 조건문에 사용한다.
+        })*/
+
+        // if (myBtn.classList.contains("blue")) {
+        //         ......
+        // } else {
+        //         ......
+        // }
+
+        // || 연산자는 가장 첫번째 truthy 값 혹은 가장 마지막 falsy 값을 반환합니다.
+        myBtn.classList.contains("blue") || myBtn.classList.contains("red") || myBtn.classList.contains("green")
+
+        // && 연산자는 가장 첫번째 falsy 값 혹은 가장 마지막 truthy 값을 반환합니다.
+        myBtn.classList.contains("blue") && myBtn.classList.contains("red") && myBtn.classList.contains("green")
+        </script>
+    </body>
+</html>
