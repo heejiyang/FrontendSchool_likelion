@@ -51,9 +51,18 @@ for(let variable of s){
 let ss = new Set("abcdeeeeeeeee".split(""));
 console.log(ss);
 
+// Set의 값을 제거하기
+ss.delete('b');
+
+// Set의 값을 확인하기
+console.log(ss.has('a'));
+
+// Set의 모든 값을 제거하기
+ss.clear
+console.log(ss);
+
 let a = new Set("abc");
 let b = new Set("cde");
-
 // 교집합
 //a를 먼저 전개하고 b를 가지고 있는가. value에 들어가는 값은 a, b, c 이므로 false, false, true
 let cro = [...a].filter(value => b.has(value))

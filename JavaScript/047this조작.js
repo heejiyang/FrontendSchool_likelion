@@ -1,3 +1,4 @@
+//call()
 var peter = {
   name : 'Peter Parker',
   sayName : function(){
@@ -22,7 +23,7 @@ var peter = {
 peter.sayName('!');
 peter.sayName.call(bruce, '!'); //Bruce Wayne!
 
-//apply
+//apply()
 var peter = {
   name : 'Peter Parker',
   sayName : function(is, is2){
