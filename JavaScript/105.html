@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        function Parent() {
+            this.name = '재현';
+        }
+        Parent.prototype.rename = function (name) {
+            this.name = name;
+        }
+        Parent.prototype.sayName = function () {
+            console.log(this.name);
+        }
+
+        // 먼저 부모의 역할을 할 생성자 함수를 만들고 자식 역할의 생성자 함수를 만듭니다.
+        function Child() {
+            Parent.call(this); // child생성자 함수가 만드는 인스턴스
+        }
+        // 객체에 생성자 연결하기
+        // Object.create함수가 실행되면 Parent.prototype바라보는 새로운 객체를 만들어 Child.prototype에 할당한다.
+        Child.prototype = Object.create(Parent.prototype,
+            // 프로퍼티 서술자 객체
+            // 내장속성을 설정할 수도 있습니다.
+            {
+                constructor: {
+                    // 프로퍼티 변경이 가능한가?
+                    configurable: true,
+                    // 열거 가능한가?
+                    enumerable: true,
+                    // 프로퍼티의 값을 수정할 수 있는가?
+                    writable: true,
+                    value: Child
+                }
+            });
+            
+        Child.prototype.canWalk = function () {
+            console.log('now i can walk!!');
+        }
+
+        const child = new Child(); // [[Prototype]] : Parent // child.__proto__ == Child.prototype (true)
+    </script>
+</body>
+</html>

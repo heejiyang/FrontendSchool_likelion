@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // 부모 생성자를 상속받는 방법
+        function Parent() {
+            this.name = '재현';
+        }
+        Parent.prototype.rename = function (name) { // name프로퍼티를 this.name으로 바꿔준다.
+            this.name = name;
+        }
+        Parent.prototype.sayName = function () {
+            console.log(this.name);
+        }
+
+        // 먼저 부모의 역할을 할 생성자 함수를 만들고 자식 역할의 생성자 함수를 만듭니다.
+        function Child() {
+            Parent.call(this); // child생성자 함수가 만드는 인스턴스
+        }
+
+        Child.prototype = Object.create(Parent.prototype);
+        Child.prototype.canWalk = function () {
+            console.log('now i can walk!!');
+        }
+    </script>
+</body>
+</html>
