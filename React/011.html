@@ -16,6 +16,7 @@
         ></script>
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
         <script type="text/babel">
+            // 관습적으로 props사용해서 .찍어 접근한다.
             function 자기소개(props) {
                 return (
                     <div>
@@ -40,6 +41,7 @@
                 );
             }
 
+            // 객체 구조분해할당 사용
             function 자기소개3({ name, age, money, house, coffee }) {
                 return (
                     <div>
