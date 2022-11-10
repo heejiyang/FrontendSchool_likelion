@@ -62,7 +62,7 @@
                             <input
                                 id="inp-field"
                                 type="text"
-                                placeholder="예) 프로그래밍"
+                                placeholder="예 프로그래밍"
                                 required
                             />
                             전문가가 될 것이다.
@@ -72,7 +72,7 @@
                             <input
                                 id="inp-time"
                                 type="number"
-                                placeholder="예) 5"
+                                placeholder="예 5"
                                 required
                             />
                             시간씩 훈련할 것이다.
@@ -84,15 +84,7 @@
                 )
             }
 
-            function ResultLoad(){
-                return (
-                    <section class="cont-result-loading">
-                        <h2 class="blind">결과 확인 로딩중</h2>
-                        <img class="img-rotate" src="img/loading.png" alt="" />
-                    </section>
-                )
-            }
-
+            
             function ResultCont(){
                 return (
                     <section class="cont-result">
@@ -118,12 +110,20 @@
                         <p class="txt-footer">
                             &#8251; 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사
                             WeNiv에 있습니다.
-                        </p>
+                            </p>
                         <p>
                             수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수
                             있습니다.
                         </p>
                     </footer>
+                )
+                }
+            function ResultLoad(){
+                return (
+                    <section class="cont-result-loading">
+                        <h2 class="blind">결과 확인 로딩중</h2>
+                        <img class="img-rotate" src="img/loading.png" alt="" />
+                    </section>
                 )
             }
 
