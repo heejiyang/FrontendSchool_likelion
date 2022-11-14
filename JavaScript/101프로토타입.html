@@ -63,7 +63,7 @@
         //     }
         // }
 
-        // 위의 객체를 생성자 함수로 나타내보자.
+        // 실습 3. 위의 객체를 생성자 함수로 나타내보자.
         function Me(name, address, phoneNum) {
             this.name = name;
             this.address = address;
@@ -75,7 +75,7 @@
         }
 
         Me.prototype.teaching = function(student){
-            student.levelUp;
+            student.levelUp();
         }
 
         const me = new Me('웨이드', '제주시', '010-0000-0000');

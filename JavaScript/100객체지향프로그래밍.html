@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // 실습 1. 여러분 자신을 추상화 해봅시다. 그리고 상호작용 하고 싶은 대상을 만들어보고 서로 상호 작용 할 수 있는 메소드를 만들어 봅시다.
+        // const me = {
+        //     name : '양희지',
+        //     address : '서울시',
+        //     eat : function(){
+        //         console.log('희지가 아침을 먹는다.');
+        //     },
+        //     baking : function(recipe){
+        //         recipe.varietyUp();
+        //     }
+        // }
+        // const recipe = {
+        //     level: 1,
+        //     varietyUp : function(){
+        //         this.variety++; // this == student , student.level = 1
+        //     }
+        // }
+        // me.baking(recipe);
+
+        // 실습 2. 음식 이름의 배열을 전달하면 배열안에서 랜덤하게 메뉴를 뽑아내는 로봇객체의 생성자를 만들어보세요.
+        let foodArr = ["페퍼로니 피자", "떡볶이", "프랜치토스트", "훠궈"];
+
+        function Robot(menu) {
+            this.randomFood = function() {
+                console.log(menu[Math.floor(Math.random() * menu.length)]);
+            };
+        }
+        const food = new Robot(menu);
+        food.randomFood();
+
+        // 예시 1
+        // const you = {
+        //     name: '웨이드',
+        //     address: '제주도 제주시 인다 1길',
+        //     phoneNum: '010-8001-6536',
+        //     canWalk: function () {
+        //         console.log('웨이드가 걷는다.');
+        //     },
+        //     teaching: function (student) {
+        //         student.levelUp();
+        //     }
+        // }
+
+        // function NewFactory(name) {
+        //     this.name = name;
+        //     this.sayYourName = function () {
+        //         console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        //     }
+        // }
+
+        // let robot1 = new NewFactory('브랜든');
+        // let robot2 = new NewFactory('웨이드');
+
+        // 예시 2
+        // function NewFactory(food) {
+        //     this.food = food;
+        //     const chosenFood = food[Math.floor(Math.random() * food.length)]
+        //     this.choice = function () {
+        //         return (`이번에는 ${chosenFood}을 드시면 됩니다.`);
+        //     };
+        // }
+
+        // let whatToEat = new NewFactory(["짜장면", "짬뽕", "탕수육", "깐풍기", "유린기", "볶음밥"]);
+        // let whatToEat2 = new NewFactory(["짜장면", "짬뽕", "탕수육", "깐풍기", "유린기", "볶음밥"]);
+
+        // console.log(whatToEat.choice());
+
+        // 예시 3
+        // function Factory(arr) {
+        //     const i = Math.floor(Math.random() * arr.length)
+        //     this.유닛명 = arr[i].유닛
+        //     this.체력 = arr[i].체력
+        //     this.공격력 = arr[i].공격력
+        // }
+
+        // const unit1 = new Factory([{ 유닛: '벌쳐', 체력: 75, 공격력: 20 }, { 유닛: '탱크', 체력: 150, 공격력: 30 }, { 유닛: '골리앗', 체력: 125, 공격력: 12 }])
+        // console.log(unit1);
+    </script>
+</body>
+</html>
