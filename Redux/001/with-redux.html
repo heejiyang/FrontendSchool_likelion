@@ -15,8 +15,14 @@
     <div id="red"></div>
     <div id="blue"></div>
     <div id="green"></div>
+    <div id="pink"></div>
+    <div id="grey"></div>
     <script>
-        // state는 현재 상태, action은 주문 받은 것! 
+        // 1. 새로운 컴포넌트가 생성될 때 코드가 늘어나지 않습니다.
+        // 2. 새로운 컴포넌트 안에서만 코딩하면 됩니다.
+
+        // reducer는 두가지를 전달받는다. state는 현재 상태, action은 주문 받은 것!
+        // dispatch의 {type:'CHANGE_COLOR', color:'red'}이게 action
         function reducer(state, action) {
             console.log(state, action);
             if (state === undefined) {
@@ -49,7 +55,7 @@
                 </div>
             `;
         }
-        // 값이 바뀔 때마다 red 함수를 호출
+        // subscribe하면 값이 바뀔 때마다 red 함수를 호출
         store.subscribe(red);
         red();
 
@@ -80,6 +86,34 @@
         }
         store.subscribe(green);
         green();
+
+        function pink() {
+            var state = store.getState();
+            document.querySelector('#pink').innerHTML = `
+                <div class="container" id="component_pink" style="background-color:${state.color}">
+                    <h1>pink</h1>
+                    <input type="button" value="fire" onclick="
+                        store.dispatch({type:'CHANGE_COLOR', color:'pink'});
+                    ">
+                </div>
+            `;
+        }
+        store.subscribe(pink);
+        pink();
+
+        function grey() {
+            var state = store.getState();
+            document.querySelector('#grey').innerHTML = `
+                <div class="container" id="component_grey" style="background-color:${state.color}">
+                    <h1>grey</h1>
+                    <input type="button" value="fire" onclick="
+                        store.dispatch({type:'CHANGE_COLOR', color:'grey'});
+                    ">
+                </div>
+            `;
+        }
+        store.subscribe(grey);
+        grey();
 
     </script>
 </body>
