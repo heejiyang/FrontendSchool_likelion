@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    // 엄격모드
+    'use strict';
+    // 전역변수처럼 쓰인다.
+    // str = "hello strict";
+
+    // 변수 선언 규칙
+    // var를 쓰면 예약어 일부도 사용할 수 있다.
+    var undefined = 'undefined';
+    var Infinity = 100;
+
+    Math.PI = 0;
+
+    const employee = {
+      firstName: 'Jhon',
+      lastName: 'Doe'
+    }
+    // console.log(employee.firstName);
+    // delete employee.firstName;
+    // console.log(employee.firstName);
+    // delete Object.prototype;
+
+    function myFunc(a, a, b){
+      console.log(a + a + b);
+    }
+    myFunc(1, 2, 3); // 7
+  </script>
+</body>
+</html>
