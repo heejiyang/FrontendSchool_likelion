@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, Timestamp } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -23,5 +23,7 @@ const app = initializeApp(firebaseConfig);
 const appFireStore = getFirestore(app);
 // firestore인증 초기화
 const appAuth = getAuth();
+// 타임 스탬프 초기화
+const timeStamp = Timestamp;
 
-export { appFireStore, appAuth }
+export { appFireStore, appAuth, timeStamp }
